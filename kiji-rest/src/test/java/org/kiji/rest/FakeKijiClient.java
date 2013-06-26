@@ -35,7 +35,7 @@ import org.kiji.schema.KijiURI;
 public class FakeKijiClient implements KijiClient {
   private final Kiji mKiji;
 
-  FakeKijiClient(Kiji kiji) {
+  public FakeKijiClient(Kiji kiji) {
     mKiji = kiji;
   }
 
