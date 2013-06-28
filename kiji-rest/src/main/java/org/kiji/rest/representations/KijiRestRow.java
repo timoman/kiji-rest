@@ -99,4 +99,12 @@ public class KijiRestRow {
   public List<KijiRestCell> getCells() {
     return mKijiCells;
   }
+
+  public static KijiRestRow newBlankRow(KijiRestRow row) {
+    KijiRestRow blankRow = new KijiRestRow();
+    blankRow.mHumanReadableEntityId = row.getEntityId();
+    blankRow.mHBaseRowKey = row.getRowKey();
+    blankRow.mKijiCells = Lists.newArrayList();
+    return blankRow;
+  }
 }
